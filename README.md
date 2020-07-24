@@ -24,7 +24,7 @@ Se listarán los endpoints y métodos disponibles y la información necesaria pa
 
 ### 1 - Clonar proyecto
 
-Clonar el repositorio desde el [siguiente link](https://github.com/guido732/delilah-resto).
+Clonar el repositorio desde el [siguiente link](https://github.com/Ignacio-Valdez/Delilah).
 
 Desde la consola con el siguiente link:
 
