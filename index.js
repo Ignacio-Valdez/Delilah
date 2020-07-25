@@ -192,7 +192,7 @@ app.get('/api/pedidos', soloAdmin, (req, res) => {
 //Agregar pedidos (Por defecto el estado siempre es "Nuevo")
 
 app.post('/api/pedidos', ensureToken, (req, res) => {
-    const query = 'INSERT INTO pedidos VALUES (NULL, ?, ?, "Nuevo", ?, ?, ?)';
+    const query = 'INSERT INTO pedidos VALUES (NULL, ?, ?, "Nuevo", ?, ?)';
     const {hora, estado, total, metodo_pago, id_usuario } = req.body;
     jwt.verify(req.token, passwordJwt, (error, data) => {
         if (error) {
