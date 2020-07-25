@@ -86,3 +86,8 @@ INSERT INTO productos_x_pedidos VALUES (NULL, 10, 7, 1);
 ALTER TABLE pedidos ADD FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario);
 ALTER TABLE productos_x_pedidos ADD FOREIGN KEY (id_producto) REFERENCES productos(id_producto);
 ALTER TABLE productos_x_pedidos ADD FOREIGN KEY (id_pedido) REFERENCES pedidos(id_pedido);
+
+ALTER TABLE productos_x_pedidos DROP FOREIGN KEY productos_x_pedidos_ibfk_1;
+ALTER TABLE productos_x_pedidos ADD CONSTRAINT productos_x_pedidos_ibfk_1 FOREIGN KEY (id_producto) REFERENCES productos(id_producto) ON DELETE CASCADE ON UPDATE RESTRICT;
+ALTER TABLE productos_x_pedidos DROP FOREIGN KEY productos_x_pedidos_ibfk_2;
+ALTER TABLE productos_x_pedidos ADD CONSTRAINT productos_x_pedidos_ibfk_2 FOREIGN KEY (id_pedido) REFERENCES pedidos(id_pedido) ON DELETE CASCADE ON UPDATE RESTRICT;
